@@ -11,7 +11,7 @@ class Solution {
             ans.add(new ArrayList<>(temp));
             return;
         }
-        for(int i = start ; i <= n ; i++){
+        for(int i = start ; i<= n - (k - temp.size()) + 1 ; i++){
             temp.add(i);
             solve(ans , temp , i + 1 , n , k);
             temp.remove(temp.size() - 1);

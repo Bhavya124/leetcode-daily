@@ -4,7 +4,7 @@ class Solution {
         for(int num : nums){
             map.put(num , map.getOrDefault(num , 0) + 1);
         }
-        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        // PriorityQueue<Integer> pq = new PriorityQueue<>();
         int[][] keyval = new int[map.size()][2];
         int i = 0;
         for(Map.Entry<Integer , Integer> entry : map.entrySet()){

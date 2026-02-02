@@ -11,9 +11,9 @@ class Solution {
             }
         }
 
-        for(int j = 0 ; j < nums.length; j++){
-            if(nums[j] != j + 1){
-                return j + 1;
+        for(int j = 1 ; j <= nums.length; j++){
+            if(nums[j - 1] != j){
+                return j;
             }
         }
 

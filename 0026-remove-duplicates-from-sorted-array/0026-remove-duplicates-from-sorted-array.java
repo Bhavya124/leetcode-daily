@@ -1,18 +1,16 @@
-import java.util.*;
 class Solution {
     public int removeDuplicates(int[] nums) {
-        Set<Integer> mpp = new LinkedHashSet<>();
-
-        for(int i = 0 ; i < nums.length ; i++){
-            mpp.add(nums[i]);
+        HashSet<Integer> set = new LinkedHashSet<>();
+        for(int num : nums){
+            set.add(num);
         }
 
-        int index = 0;
-        for(int it : mpp){
-            nums[index] = it;
-            index++;
+        int ind = 0;
+        for(int n : set){
+            nums[ind] = n;
+            ind++;
         }
 
-        return index;
+        return ind;
     }
 }

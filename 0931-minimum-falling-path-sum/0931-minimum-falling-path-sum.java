@@ -4,7 +4,7 @@ class Solution {
         int n = matrix[0].length;
         int[][] dp = new int[m][n];
         for(int [] it : dp){
-            Arrays.fill(it , -1);
+            Arrays.fill(it , Integer.MAX_VALUE);
         }
         int mini = Integer.MAX_VALUE;
         for(int i = 0 ;i < n ; i++){
@@ -20,7 +20,7 @@ class Solution {
         if(i == m - 1){
             return matrix[i][j];
         }
-        if(dp[i][j] != -1){
+        if(dp[i][j] != Integer.MAX_VALUE){
             return dp[i][j];
         }
         int left = count(i + 1 , j - 1 , m , n , matrix , dp);
